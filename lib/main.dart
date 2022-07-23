@@ -31,15 +31,63 @@ class RoutesExample extends StatelessWidget {
         title: const Text('First Page'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            //Navigator.push(context, _PageTwo());
-            Navigator.of(context).push(CustomPageRoute(
-              child: SecondPage(),
-              //direction: AxisDirection.up,
-            ));
-          },
-          child: const Text('Go to page two'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Demonstration of animation while Rounting",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 32),
+            ),
+            const SizedBox(height: 25),
+            ElevatedButton(
+              onPressed: () {
+                //Navigator.push(context, _PageTwo());
+                Navigator.of(context).push(CustomPageRoute(
+                  child: SecondPage(),
+                  direction: AxisDirection.down,
+                ));
+              },
+              child: const Text('Call page two from #TOP'),
+            ),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                //Navigator.push(context, _PageTwo());
+                Navigator.of(context).push(CustomPageRoute(
+                  child: SecondPage(),
+                  direction: AxisDirection.up,
+                ));
+              },
+              child: const Text('Call page two from #BOTTOM'),
+            ),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                //Navigator.push(context, _PageTwo());
+                Navigator.of(context).push(CustomPageRoute(
+                  child: SecondPage(),
+                  direction: AxisDirection.right,
+                ));
+              },
+              child: const Text('Call page two from #LEFT'),
+            ),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                //Navigator.push(context, _PageTwo());
+                Navigator.of(context).push(CustomPageRoute(
+                  child: SecondPage(),
+                  direction: AxisDirection.left,
+                ));
+              },
+              child: const Text('Call page two from #RIGHT'),
+            ),
+            const SizedBox(height: 40),
+            const Text("Rahul shahare", textAlign: TextAlign.center),
+            const Text("Founder @ Oceangreen Technology",
+                textAlign: TextAlign.center),
+          ],
         ),
       ),
     );
@@ -56,12 +104,19 @@ class SecondPage extends StatelessWidget {
         title: const Text('Second Page'),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            //Navigator.push(context, _PageTwo());
-            Navigator.pop(context);
-          },
-          child: const Text('FirstPage'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text("This is second page"),
+            const SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                //Navigator.push(context, _PageTwo());
+                Navigator.pop(context);
+              },
+              child: const Text('Go back to #FirstPage'),
+            ),
+          ],
         ),
       ),
     );
