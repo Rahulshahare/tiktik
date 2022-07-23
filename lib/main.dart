@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'custom_page_route.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,8 +34,10 @@ class RoutesExample extends StatelessWidget {
         child: ElevatedButton(
           onPressed: () {
             //Navigator.push(context, _PageTwo());
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => SecondPage()));
+            Navigator.of(context).push(CustomPageRoute(
+              child: SecondPage(),
+              //direction: AxisDirection.up,
+            ));
           },
           child: const Text('Go to page two'),
         ),
