@@ -88,7 +88,7 @@ class RoutesExample extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(CustomPageRoute(
                   child: Tiktik(),
-                  direction: AxisDirection.right,
+                  direction: AxisDirection.left,
                 ));
               },
               child: const Text('TIktik'),
@@ -139,6 +139,9 @@ class Tiktik extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Tiktik'),
+      ),
       body: Column(
         children: <Widget>[
           // Top section
