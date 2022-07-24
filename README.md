@@ -16,6 +16,7 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ##Updates
+
 1.0.0 (23 jully 2022)
     - try to create variety of animation for pages
     - tiktik ui created
