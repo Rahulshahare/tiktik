@@ -17,9 +17,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ##Updates
 
-1.0.0 (23 jully 2022)
+- 1.0.0 (23 jully 2022)
     - try to create variety of animation for pages
     - tiktik ui created
-1.0.2 (24th jully 2022)
+- 1.0.2 (24th jully 2022)
     - scrolling functionality added to home page.
     - a message list page created
