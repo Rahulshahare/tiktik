@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktik/ui/msg_list_ui.dart';
 import 'custom_page_route.dart';
 
 void main() {
@@ -96,6 +97,16 @@ class RoutesExample extends StatelessWidget {
                   ));
                 },
                 child: const Text('TIktik'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: MessageList(),
+                    direction: AxisDirection.left,
+                  ));
+                },
+                child: const Text('Message List'),
               ),
               const SizedBox(height: 40),
               const Text("Rahul shahare", textAlign: TextAlign.center),
