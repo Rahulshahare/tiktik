@@ -30,74 +30,79 @@ class RoutesExample extends StatelessWidget {
       appBar: AppBar(
         title: const Text('First Page'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              "Demonstration of animation while Rounting",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 32),
-            ),
-            const SizedBox(height: 25),
-            ElevatedButton(
-              onPressed: () {
-                //Navigator.push(context, _PageTwo());
-                Navigator.of(context).push(CustomPageRoute(
-                  child: SecondPage(),
-                  direction: AxisDirection.down,
-                ));
-              },
-              child: const Text('Call page two from #TOP'),
-            ),
-            const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () {
-                //Navigator.push(context, _PageTwo());
-                Navigator.of(context).push(CustomPageRoute(
-                  child: SecondPage(),
-                  direction: AxisDirection.up,
-                ));
-              },
-              child: const Text('Call page two from #BOTTOM'),
-            ),
-            const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () {
-                //Navigator.push(context, _PageTwo());
-                Navigator.of(context).push(CustomPageRoute(
-                  child: SecondPage(),
-                  direction: AxisDirection.right,
-                ));
-              },
-              child: const Text('Call page two from #LEFT'),
-            ),
-            const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () {
-                //Navigator.push(context, _PageTwo());
-                Navigator.of(context).push(CustomPageRoute(
-                  child: SecondPage(),
-                  direction: AxisDirection.left,
-                ));
-              },
-              child: const Text('Call page two from #RIGHT'),
-            ),
-            const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(CustomPageRoute(
-                  child: Tiktik(),
-                  direction: AxisDirection.left,
-                ));
-              },
-              child: const Text('TIktik'),
-            ),
-            const SizedBox(height: 40),
-            const Text("Rahul shahare", textAlign: TextAlign.center),
-            const Text("Founder @ Oceangreen Technology",
-                textAlign: TextAlign.center),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding:
+              const EdgeInsets.only(top: 150, bottom: 20, left: 5, right: 5),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text(
+                "Demonstration of animation while Rounting",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 32),
+              ),
+              const SizedBox(height: 25),
+              ElevatedButton(
+                onPressed: () {
+                  //Navigator.push(context, _PageTwo());
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: SecondPage(),
+                    direction: AxisDirection.down,
+                  ));
+                },
+                child: const Text('Call page two from #TOP'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  //Navigator.push(context, _PageTwo());
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: SecondPage(),
+                    direction: AxisDirection.up,
+                  ));
+                },
+                child: const Text('Call page two from #BOTTOM'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  //Navigator.push(context, _PageTwo());
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: SecondPage(),
+                    direction: AxisDirection.right,
+                  ));
+                },
+                child: const Text('Call page two from #LEFT'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  //Navigator.push(context, _PageTwo());
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: SecondPage(),
+                    direction: AxisDirection.left,
+                  ));
+                },
+                child: const Text('Call page two from #RIGHT'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: Tiktik(),
+                    direction: AxisDirection.left,
+                  ));
+                },
+                child: const Text('TIktik'),
+              ),
+              const SizedBox(height: 40),
+              const Text("Rahul shahare", textAlign: TextAlign.center),
+              const Text("Founder @ Oceangreen Technology",
+                  textAlign: TextAlign.center),
+            ],
+          ),
         ),
       ),
     );
