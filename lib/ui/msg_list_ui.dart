@@ -39,6 +39,20 @@ class MessageList extends StatelessWidget {
     );
   }
 
+  Widget _reBuildMessage() {
+    return Expanded(
+        child: Row(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+          Expanded(child: Container(color: Colors.green[300])),
+          Container(
+            width: 100.0,
+            color: Colors.red[300],
+          )
+        ]));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,8 +61,34 @@ class MessageList extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            _buildMessage(),
+          children: <Widget>[
+            for (var i = 0; i < 5; i++)
+              GestureDetector(
+                onTap: () => print('click'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 100.0,
+                      height: 10.0,
+                      color: Colors.red[300],
+                    ),
+                    Expanded(
+                      child: Container(
+                        color: Colors.green,
+                        height: 10.0,
+                      ),
+                    ),
+                    Container(
+                      width: 100.0,
+                      height: 10.0,
+                      color: Colors.yellow,
+                    )
+                  ],
+                ),
+              ),
+            Divider(),
+            Text('Here trying to create a list of messages and its layout'),
             Divider(),
             _buildMessage(),
             Divider(),
