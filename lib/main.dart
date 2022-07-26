@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tiktik/ui/ListView.dart';
 import 'package:tiktik/ui/msg_list_ui.dart';
+import 'package:tiktik/ui/scrollable_list.dart';
 import 'custom_page_route.dart';
 
 void main() {
@@ -118,6 +119,16 @@ class RoutesExample extends StatelessWidget {
                   ));
                 },
                 child: const Text('List View Experiment'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: const ScrollablePositionedListExample(),
+                    direction: AxisDirection.left,
+                  ));
+                },
+                child: const Text('ScrollablePositionedList'),
               ),
               const SizedBox(height: 40),
               const Text("Rahul shahare", textAlign: TextAlign.center),

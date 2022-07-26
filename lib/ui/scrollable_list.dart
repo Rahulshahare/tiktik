@@ -9,9 +9,9 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 const numberOfItems = 5001;
 const minItemHeight = 20.0;
 const maxItemHeight = 150.0;
-const scrollDuration = Duration(seconds: 2);
+const scrollDuration = Duration(seconds: 3);
 
-const randomMax = 1 << 32;
+const randomMax = 1 << 10;
 
 // void main() {
 //   runApp(ScrollablePositionedListExample());
@@ -25,7 +25,7 @@ class ScrollablePositionedListExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ScrollablePositionedList Example'),
+        title: const Text('ScrollablePositionedList Example'),
       ),
       //theme: ThemeData(primarySwatch: Colors.blue),
       body: const ScrollablePositionedListPage(),
