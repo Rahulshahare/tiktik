@@ -25,22 +25,17 @@ class BodyLayout extends StatelessWidget {
 
 Widget _myListView(BuildContext context) {
   return ListView(
-    children: <Widget>[
-      Container(
-        color: Colors.yellow,
-        height: 70.0,
+    children: const <Widget>[
+      ListTile(
+        textColor: Colors.blue,
+        leading: Icon(Icons.verified_user),
+        title: Text('FLUTTER'),
+        subtitle: Text(
+          'ListViewExperiment',
+          style: TextStyle(fontSize: 10),
+        ),
+        trailing: Text('3 mints ago'),
       ),
-      Divider(),
-      Container(
-        color: Colors.yellow,
-        height: 70.0,
-      ),
-      Divider(),
-      Container(
-        color: Colors.yellow,
-        height: 70.0,
-      ),
-      Divider(),
     ],
   );
 }
