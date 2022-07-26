@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiktik/ui/ListView.dart';
 import 'package:tiktik/ui/msg_list_ui.dart';
 import 'custom_page_route.dart';
 
@@ -34,7 +35,7 @@ class RoutesExample extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding:
-              const EdgeInsets.only(top: 150, bottom: 20, left: 5, right: 5),
+              const EdgeInsets.only(top: 100, bottom: 20, left: 5, right: 5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -107,6 +108,16 @@ class RoutesExample extends StatelessWidget {
                   ));
                 },
                 child: const Text('Message List'),
+              ),
+              const SizedBox(height: 15),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(CustomPageRoute(
+                    child: const ListViewExperiment(),
+                    direction: AxisDirection.left,
+                  ));
+                },
+                child: const Text('List View Experiment'),
               ),
               const SizedBox(height: 40),
               const Text("Rahul shahare", textAlign: TextAlign.center),
